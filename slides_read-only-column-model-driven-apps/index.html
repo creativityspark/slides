@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Read-only column in Model Driven Apps in 5 steps</title>
+
+		<meta name="description" content="How can I make a field editable only to certain users in model-driven apps? There are several ways, and taking advantage of the functionality provided by field level security is one of them.">
+
+		<link rel="stylesheet" type="text/css" href="../lib/offline-v2.css">
+
+
+
+		<!-- User CSS -->
+		<style id="user-css-output" type="text/css">
+			.reveal ul.share-buttons {
+  list-style: none;
+  padding: 0;
+}
+.reveal ul.share-buttons li {
+  display: inline;
+}
+.reveal ul.share-buttons .sr-only {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+		</style>
+	</head>
+	<body class="reveal-viewport theme-font-montserrat theme-color-white-blue">
+		<div class="reveal">
+			<div class="slides">
+				<section data-id="7fce0b53d389f5d4574f24a89c300376" data-background-color="rgb(238, 238, 238)" data-background-opacity="0.5" data-background-image="assets/cf05d435cf3cc0936aecea8c07e59803" data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 950px; left: 0px; top: 71px; height: auto;" data-block-id="377e2f153e73229e78438d472367bd53" data-name="text-253f24">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Read-only column</h1>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="image" data-name="image-f12a48" data-block-id="c4a89a9f2a989f069e444a2f7e185404" style="width: 952.356px; height: 793.56px; left: -1.178px; top: 406.44px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 11; transition-duration: 0.6s; transition-delay: 0.6s;" data-animation-type="fade-in"><img style="left: 0px; top: -0.44px; width: 1648px; height: 794px;" data-natural-width="1022" data-natural-height="492" data-crop-x="0" data-crop-y="0.000554" data-crop-width="0.577742" data-crop-height="1" data-lazy-loaded="" data-src="assets/1d9152fba40656af9b824235136de5a7.png"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-31e8ab" data-block-id="2673cd3bda56253a53efc1b4c343db85" style="height: auto; width: 950px; left: 0px; top: 213px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; transition-duration: 0.6s; transition-delay: 0.6s;" data-animation-type="fade-in">
+<h3>Learn how to create a read-only column for certain users in a Model Driven App in <span style="color:#000080">5 steps</span>
+</h3>
+</div></div></section><section data-background-color="rgb(238, 238, 238)" data-background-image="assets/cf05d435cf3cc0936aecea8c07e59803" data-background-size="initial" data-background-opacity="0.5" data-id="b8782c3111601760457714f3328ea758"><div class="sl-block" data-block-type="text" style="width: 950px; left: 0px; top: 71px; height: auto;" data-name="text-253f24" data-block-id="0a35457f7f6fc7f354882705c796790d">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>
+<span style="color:rgb(48, 48, 48); text-align:left">How can I make a field editable </span><span style="color:#000080"><span style="text-align:left">only to certain users</span></span><span style="color:rgb(48, 48, 48); text-align:left"> in Model Driven Apps?</span>
+</h2>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="image" data-name="image-f12a48" style="width: 950.963px; height: 593.971px; left: 0px; top: 606.029px; min-width: 1px; min-height: 1px;" data-block-id="f95c253bd94bff1a097f74242cc4ca3c"><div class="sl-block-content" style="z-index: 11; transition-duration: 0.6s; transition-delay: 0.6s;" data-animation-type="fade-in"><img style="left: 0px; top: 0px; width: 1646px; height: 792px;" data-natural-width="1022" data-natural-height="492" data-crop-x="0" data-crop-y="0" data-crop-width="0.577742" data-crop-height="0.749585" data-lazy-loaded="" data-src="assets/1d9152fba40656af9b824235136de5a7.png"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-31e8ab" style="height: auto; width: 950px; left: 0px; top: 386.293px;" data-block-id="ee379e9f50ab4b1db237e4247a12dbc3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; transition-duration: 0.6s; transition-delay: 0.6s;" data-animation-type="fade-in">
+<h3>
+<span style="color:rgb(48, 48, 48); text-align:left">There are several ways, and taking advantage of the functionality provided by </span><span style="color:#000080"><span style="text-align:left">field level security</span></span><span style="color:rgb(48, 48, 48); text-align:left"> is one of them.</span>
+</h3>
+</div></div></section><section data-background-color="rgb(238, 238, 238)" data-background-image="assets/cf05d435cf3cc0936aecea8c07e59803" data-background-size="initial" data-background-opacity="0.5" data-id="97acbcc60309f6f6dcb0bca27faf0c1a" data-auto-animate=""><div class="sl-block" data-block-type="text" style="width: 950px; left: -1px; top: 0px; height: auto;" data-name="text-253f24" data-block-id="78d71440471547aee31f959b3728edbb">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Step 1</h1>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" data-name="text-31e8ab" style="height: auto; width: 950px; left: -1px; top: 115.733px;" data-block-id="aa88dce94ca57746d732de3bb6c89af4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>
+<span style="color:rgb(48, 48, 48); text-align:left">Go to solutions, open your solution, locate the </span><span style="color:rgb(48, 48, 48); text-align:left">table </span><span style="color:rgb(48, 48, 48); text-align:left">and </span><span style="color:rgb(48, 48, 48); text-align:left">column </span><span style="color:rgb(48, 48, 48); text-align:left">you want to make read only click on its name</span>
+</h3>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 950px; left: -1px; top: 324px;" data-block-id="6e23e7eea319a41ef447cba9e2992a1e" data-name="text-32496a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h3>
+<span style="color:rgb(48, 48, 48); text-align:left">Expand the </span><span style="color:rgb(48, 48, 48); text-align:left">advanced options</span><span style="color:rgb(48, 48, 48); text-align:left"> and then select the </span><span style="color:#000080"><span style="text-align:left">Enable column security</span></span><span style="color:rgb(48, 48, 48); text-align:left"> option.</span>
+</h3>
+</div></div>
+<div class="sl-block" data-block-type="video" data-name="video-187cbf" data-block-id="71e29bbef79fe9a1e6c29c157d636f76" style="min-width: 30px; min-height: 30px; width: 950px; height: 712.5px; left: 0px; top: 487.5px;"><div class="sl-block-content" style="z-index: 13;"><video playsinline="" controls="controls" data-paused-by-reveal="" data-lazy-loaded="" data-src="assets/65f4f9c08140d142c87413e3cfb81601.mp4"></video></div></div></section><section data-background-color="rgb(238, 238, 238)" data-background-image="assets/cf05d435cf3cc0936aecea8c07e59803" data-background-size="initial" data-background-opacity="0.5" data-auto-animate="" data-id="acf420cde9ad65f89a5aa86631f7db51"><div class="sl-block" data-block-type="text" style="width: 950px; left: -1px; top: 0px; height: auto;" data-name="text-253f24" data-block-id="4f2cd1ed0bdff53c1fc0ad066d66db4f">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Step 1</h1>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" data-name="text-477539" style="height: auto; width: 381.555px; left: 475px; top: 982.081px;" data-block-id="8c8633dad7170d479fb73f010910a922"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p style="text-align:right"><span style="font-size:0.7em">Tip: watch video in full screen mode</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-d66313" style="width: 23.838px; height: 23.838px; left: 869px; top: 994px; min-width: 1px; min-height: 1px;" data-block-id="4e9c03a58ed678395de7be762b523684"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="512" data-natural-height="512" data-lazy-loaded="" data-src="assets/fe3362b80295a86940b9f07e87109965.png"></div></div>
+<div class="sl-block" data-block-type="video" data-name="video-187cbf" style="min-width: 30px; min-height: 30px; width: 950px; height: 712.5px; left: 0px; top: 243.75px;" data-block-id="526b8b8275f369d0ff258530e8cdafe2"><div class="sl-block-content" style="z-index: 13;"><video playsinline="" controls="controls" data-paused-by-reveal="" data-autoplay="" data-lazy-loaded="" data-src="assets/65f4f9c08140d142c87413e3cfb81601.mp4"></video></div></div></section><section data-background-color="rgb(238, 238, 238)" data-background-image="assets/cf05d435cf3cc0936aecea8c07e59803" data-background-size="initial" data-background-opacity="0.5" data-auto-animate="" data-id="0045fd66b42c1d475520864ab581183d"><div class="sl-block" data-block-type="text" style="width: 950px; left: -1px; top: 0px; height: auto;" data-name="text-253f24" data-block-id="100bbc1b6a0925b3f7f1e5241f2fd0be">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Step 2</h1>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" data-name="text-31e8ab" style="height: auto; width: 950px; left: 0px; top: 213px;" data-block-id="bbb3f3fc77dcf63df723486e6a76adce"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>
+<span style="color:rgb(48, 48, 48); text-align:left">Go back to your solution, then select </span><span style="color:rgb(48, 48, 48); text-align:left">add new</span><span style="color:rgb(48, 48, 48); text-align:left">, then </span><span style="color:rgb(48, 48, 48); text-align:left">Other</span><span style="color:rgb(48, 48, 48); text-align:left">, </span><span style="color:rgb(48, 48, 48); text-align:left">Column security profile</span><span style="color:rgb(48, 48, 48); text-align:left">.</span>
+</h3>
+</div></div>
+
+<div class="sl-block" data-block-type="video" data-name="video-09d6f1" data-block-id="00372c2552e889f6a10d612cb90ff4ef" style="min-width: 30px; min-height: 30px; width: 951px; height: 713.25px; left: -1px; top: 486.75px;"><div class="sl-block-content" style="z-index: 12;"><video playsinline="" controls="controls" data-paused-by-reveal="" data-lazy-loaded="" data-src="assets/1cb38d9ec6057c24ba8dd5ed82eaaa1b.mp4"></video></div></div></section><section data-background-color="rgb(238, 238, 238)" data-background-image="assets/cf05d435cf3cc0936aecea8c07e59803" data-background-size="initial" data-background-opacity="0.5" data-auto-animate="" data-id="dbdc8d5f3b6b8d4d57e402044570c252"><div class="sl-block" data-block-type="text" style="width: 950px; left: -1px; top: 0px; height: auto;" data-name="text-253f24" data-block-id="fd2148b625c702a0b89a2eb7037e0faa">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Step 2</h1>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="video" data-name="video-09d6f1" style="width: 951px; height: 713.25px; left: -0.5px; top: 243.375px;" data-block-id="4acb767788eaa1878fa4eb19354b8261"><div class="sl-block-content" style="z-index: 11;"><video playsinline="" controls="controls" data-lazy-loaded="" data-paused-by-reveal="" data-autoplay="" data-src="assets/1cb38d9ec6057c24ba8dd5ed82eaaa1b.mp4"></video></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-477539" style="height: auto; width: 381.555px; left: 475px; top: 982.081px;" data-block-id="6910c6f816c272844398720ba198691c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align:right"><span style="font-size:0.7em">Tip: watch video in full screen mode</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-d66313" style="width: 23.838px; height: 23.838px; left: 869px; top: 994px; min-width: 1px; min-height: 1px;" data-block-id="cd5da318f5ef6f29e67c233d05b7e7b1"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="512" data-natural-height="512" data-lazy-loaded="" data-src="assets/fe3362b80295a86940b9f07e87109965.png"></div></div></section><section data-background-color="rgb(238, 238, 238)" data-background-image="assets/cf05d435cf3cc0936aecea8c07e59803" data-background-size="initial" data-background-opacity="0.5" data-auto-animate="" data-id="abf475f33b6763362429bb628f3234f2"><div class="sl-block" data-block-type="text" style="width: 950px; left: -1px; top: 0px; height: auto;" data-name="text-253f24" data-block-id="41efc8345e3c65e763a7febd1268c89f">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Step 3</h1>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" data-name="text-31e8ab" style="height: auto; width: 950px; left: -1px; top: 243.232px;" data-block-id="d4b32f048192191eed6f9d6d84a880fc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>
+<span style="color:rgb(48, 48, 48); text-align:left">On the form give it a name, and Click on </span><span style="color:#000080"><span style="text-align:left">Save</span></span><span style="color:rgb(48, 48, 48); text-align:left">.</span>
+</h3>
+</div></div>
+
+<div class="sl-block" data-block-type="video" data-name="video-b1ac2d" data-block-id="c9a6eb22ee29dc94e690583814892682" style="min-width: 30px; min-height: 30px; width: 949px; height: 711.75px; left: 0px; top: 488.25px;"><div class="sl-block-content" style="z-index: 12;"><video playsinline="" controls="controls" data-paused-by-reveal="" data-lazy-loaded="" data-src="assets/bf0aa38c2d579bbe9a86b7f122e6051d.mp4"></video></div></div></section><section data-background-color="rgb(238, 238, 238)" data-background-image="assets/cf05d435cf3cc0936aecea8c07e59803" data-background-size="initial" data-background-opacity="0.5" data-auto-animate="" data-id="71bbb40e89c771cc2f12302fad92382f"><div class="sl-block" data-block-type="text" style="width: 950px; left: -1px; top: 0px; height: auto;" data-name="text-253f24" data-block-id="ab649f720c4f71e01445b7a96f616f5b">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Step 3</h1>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="video" data-name="video-b1ac2d" style="width: 949px; height: 711.75px; left: 0.5px; top: 244.125px;" data-block-id="2dbc9ebe94a8a44c9b8b3da375ff2486"><div class="sl-block-content" style="z-index: 11;"><video playsinline="" controls="controls" data-lazy-loaded="" data-paused-by-reveal="" data-autoplay="" data-src="assets/bf0aa38c2d579bbe9a86b7f122e6051d.mp4"></video></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-477539" style="height: auto; width: 381.555px; left: 475px; top: 982.081px;" data-block-id="dde5ee38f24d75de76fbfc309805762e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align:right"><span style="font-size:0.7em">Tip: watch video in full screen mode</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-d66313" style="width: 23.838px; height: 23.838px; left: 869px; top: 994px; min-width: 1px; min-height: 1px;" data-block-id="7601d2efca60f403f1b511a3a8a804fb"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="512" data-natural-height="512" data-lazy-loaded="" data-src="assets/fe3362b80295a86940b9f07e87109965.png"></div></div></section><section data-background-color="rgb(238, 238, 238)" data-background-image="assets/cf05d435cf3cc0936aecea8c07e59803" data-background-size="initial" data-background-opacity="0.5" data-auto-animate="" data-id="205403b6f39a201e389856b673be4c62"><div class="sl-block" data-block-type="text" style="width: 950px; left: -1px; top: 0px; height: auto;" data-name="text-253f24" data-block-id="4cc9bcaffd6007fae8e946c36526410e">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Step 4</h1>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" data-name="text-31e8ab" style="height: auto; width: 950px; left: -1px; top: 152px;" data-block-id="76dc4e27299b162da311b57b031d5401"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>
+<span style="color:rgb(48, 48, 48); text-align:left">Go to </span><span style="color:#000080"><span style="text-align:left">field permissions</span></span><span style="color:rgb(48, 48, 48); text-align:left">, select the column you want to hide and click on </span><span style="color:#000080"><span style="text-align:left">Edit</span></span><span style="color:rgb(48, 48, 48); text-align:left">. Change the </span><span style="color:#000080"><span style="text-align:left">Allow Read</span></span><span style="color:rgb(48, 48, 48); text-align:left"> option to yes, and leave the other two to No. Click on </span><span style="color:#000080"><span style="text-align:left">OK</span></span><span style="color:rgb(48, 48, 48); text-align:left">.</span>
+</h3>
+</div></div>
+
+<div class="sl-block" data-block-type="video" data-name="video-f443e7" data-block-id="f0923bc10c3ece8f371cd59fb91f831f" style="min-width: 30px; min-height: 30px; width: 948.868px; height: 711.651px; left: -1px; top: 488.349px;"><div class="sl-block-content" style="z-index: 12;"><video playsinline="" controls="controls" data-paused-by-reveal="" data-lazy-loaded="" data-src="assets/b6c1cbcc827f0471e64824da124c26a3.mp4"></video></div></div></section><section data-background-color="rgb(238, 238, 238)" data-background-image="assets/cf05d435cf3cc0936aecea8c07e59803" data-background-size="initial" data-background-opacity="0.5" data-auto-animate="" data-id="5b7fe5083288972c82b375954e064cfd"><div class="sl-block" data-block-type="text" style="width: 950px; left: -1px; top: 0px; height: auto;" data-name="text-253f24" data-block-id="afbf70cc9c2bfb5fc14de23cd31a79dd">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Step 4</h1>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="video" data-name="video-f443e7" style="width: 948.868px; height: 711.651px; left: 1.132px; top: 244.174px;" data-block-id="2c191f3c1a6befda75280db9cbd8efc8"><div class="sl-block-content" style="z-index: 11;"><video playsinline="" controls="controls" data-lazy-loaded="" data-paused-by-reveal="" data-autoplay="" data-src="assets/b6c1cbcc827f0471e64824da124c26a3.mp4"></video></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-477539" style="height: auto; width: 381.555px; left: 475px; top: 982.081px;" data-block-id="68a4f0a7f482ccc266b8910ab84e2d04"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align:right"><span style="font-size:0.7em">Tip: watch video in full screen mode</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-d66313" style="width: 23.838px; height: 23.838px; left: 869px; top: 994px; min-width: 1px; min-height: 1px;" data-block-id="5117eb5a86beaeb6bf61f0ff5aea8282"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="512" data-natural-height="512" data-lazy-loaded="" data-src="assets/fe3362b80295a86940b9f07e87109965.png"></div></div></section><section data-background-color="rgb(238, 238, 238)" data-background-image="assets/cf05d435cf3cc0936aecea8c07e59803" data-background-size="initial" data-background-opacity="0.5" data-auto-animate="" data-id="30f542ab5bc9f9b0a453ae48d22867c0"><div class="sl-block" data-block-type="text" style="width: 950px; left: -1px; top: 0px; height: auto;" data-name="text-253f24" data-block-id="45c1843a6047ec899fe36879e828eb6e">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Step 5</h1>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" data-name="text-31e8ab" style="height: auto; width: 950px; left: -1px; top: 208px;" data-block-id="0cd6e40354135c1d6c06c363eaeb78de"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3>
+<span style="color:rgb(48, 48, 48); text-align:left">Select the </span><span style="color:#4B0082"><span style="text-align:left">Teams </span></span><span style="color:rgb(48, 48, 48); text-align:left">and </span><span style="color:#000080"><span style="text-align:left">Users </span></span><span style="color:rgb(48, 48, 48); text-align:left">sections on the left to add the users or teams you want this rule to apply to.</span>
+</h3>
+</div></div>
+
+<div class="sl-block" data-block-type="video" data-name="video-cad605" data-block-id="af0e8e04a77d0c8efe3353dea78b62e5" style="min-width: 30px; min-height: 30px; width: 950px; height: 712.5px; left: -1px; top: 487.5px;"><div class="sl-block-content" style="z-index: 12;"><video playsinline="" controls="controls" data-paused-by-reveal="" data-lazy-loaded="" data-src="assets/f9ce30d827ca289a910d79eb0c3a350f.mp4"></video></div></div></section><section data-background-color="rgb(238, 238, 238)" data-background-image="assets/cf05d435cf3cc0936aecea8c07e59803" data-background-size="initial" data-background-opacity="0.5" data-auto-animate="" data-id="491c6e8f047764a0351064fa3455ae9c"><div class="sl-block" data-block-type="text" style="width: 950px; left: -1px; top: 0px; height: auto;" data-name="text-253f24" data-block-id="86ac982a2ea890da476a4c205c4fd618">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Step 5</h1>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="video" data-name="video-cad605" style="width: 950px; height: 712.5px; left: 0px; top: 243.75px;" data-block-id="576ba48101da096d37b9f62be9806805"><div class="sl-block-content" style="z-index: 11;"><video playsinline="" controls="controls" data-lazy-loaded="" data-paused-by-reveal="" data-autoplay="" data-src="assets/f9ce30d827ca289a910d79eb0c3a350f.mp4"></video></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-477539" style="height: auto; width: 381.555px; left: 475px; top: 982.081px;" data-block-id="0904001f005afe1031151f86e32e7dbb"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align:right"><span style="font-size:0.7em">Tip: watch video in full screen mode</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-d66313" style="width: 23.838px; height: 23.838px; left: 869px; top: 994px; min-width: 1px; min-height: 1px;" data-block-id="cedce26ecffddeebc85d1eed64220bd1"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="512" data-natural-height="512" data-lazy-loaded="" data-src="assets/fe3362b80295a86940b9f07e87109965.png"></div></div></section><section data-background-color="rgb(238, 238, 238)" data-background-image="assets/cf05d435cf3cc0936aecea8c07e59803" data-background-size="initial" data-background-opacity="0.5" data-auto-animate="" data-id="ad6c72cfa40253ae9396f84732d3e56a"><div class="sl-block" data-block-type="text" style="width: 950px; left: -1px; top: 0px; height: auto;" data-name="text-253f24" data-block-id="fa694a818feb8461783cdabb7ad20b9e">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Final</h1>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" data-name="text-31e8ab" style="height: auto; width: 950px; left: 0px; top: 112.047px;" data-block-id="9f335c6f07d55631ed715d3238cfc60c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3 style="color:rgb(48, 48, 48)">To test it, access the record with a user belonging to the team you selected in the security profile.<br>
+You will notice a <span style="color:#000080">lock </span>icon next to the field with the field level security applied.<br>
+The field level security <span style="color:#000080">won't apply</span> if your user has a <span style="color:#000080">System Administrator</span> role.</h3>
+</div></div>
+
+<div class="sl-block" data-block-type="video" data-name="video-2e3d5d" data-block-id="7b7a30afa47e5f7b93678f12fc3a7253" style="min-width: 30px; min-height: 30px; width: 949px; height: 711.75px; left: 0px; top: 488.25px;"><div class="sl-block-content" style="z-index: 12;"><video playsinline="" controls="controls" data-paused-by-reveal="" data-lazy-loaded="" data-src="assets/48dccf04f636020523da49fc52fa7a29.mp4"></video></div></div></section><section data-background-color="rgb(238, 238, 238)" data-background-image="assets/cf05d435cf3cc0936aecea8c07e59803" data-background-size="initial" data-background-opacity="0.5" data-auto-animate="" data-id="2ccaf3a3345f8c290471e674d91c465f"><div class="sl-block" data-block-type="text" style="width: 950px; left: -1px; top: 0px; height: auto;" data-name="text-253f24" data-block-id="ceeb85943d3338079d9404da495b17e6">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Final</h1>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="video" data-name="video-2e3d5d" style="width: 949px; height: 711.75px; left: 0.5px; top: 244.125px;" data-block-id="83dd5577267a7ba5f2c2790d5375910c"><div class="sl-block-content" style="z-index: 11;"><video playsinline="" controls="controls" data-paused-by-reveal="" data-lazy-loaded="" data-autoplay="" data-src="assets/48dccf04f636020523da49fc52fa7a29.mp4"></video></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-477539" style="height: auto; width: 381.555px; left: 475px; top: 982.081px;" data-block-id="ee1a108b501f45b48154faf32876cb96"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align:right"><span style="font-size:0.7em">Tip: watch video in full screen mode</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-d66313" style="width: 23.838px; height: 23.838px; left: 869px; top: 994px; min-width: 1px; min-height: 1px;" data-block-id="501c025d7e6c4c494e95ad5e39e490ee"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="512" data-natural-height="512" data-lazy-loaded="" data-src="assets/fe3362b80295a86940b9f07e87109965.png"></div></div></section><section data-background-color="rgb(238, 238, 238)" data-background-image="assets/cf05d435cf3cc0936aecea8c07e59803" data-background-size="initial" data-background-opacity="0.5" data-id="a902aca779cef96e7b0dfc00684d9489"><div class="sl-block" data-block-type="text" style="width: 720px; left: 115px; top: 219.508px; height: auto;" data-block-id="9dddcee8c11c48b765862f80f6b13f12">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; text-align: center;">
+<h2>Go on.</h2>
+</div>
+</div>
+
+
+
+<div class="sl-block" data-block-type="image" data-name="image-eb1371" style="width: 118.873px; height: 140.666px; left: 330.978px; top: 874.155px; min-width: 1px; min-height: 1px;" data-block-id="a11443d5a405658fc9197f61f26e8441">
+    <div class="sl-block-style" style="z-index: 11; filter: drop-shadow(rgba(0, 0, 0, 0.5) 0px 0px 5px);">
+        <div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="60" data-natural-height="71" data-lazy-loaded="" data-src="assets/b7b56cf6cb8259a8503cec769fc1e261.png"></div>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" data-name="text-6e4957" style="height: auto; width: 141.092px; left: 465.395px; top: 905.495px;" data-block-id="2f1ab8202e6ee075a5bed19443dcd680">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+        <p style="text-align:left"><span style="font-size:1.0em">Creativity</span></p>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 160.721px; left: 465.395px; top: 930.535px;" data-name="text-fc849d" data-block-id="288470d6f34815eed48500a52d6d91f9">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+        <p style="text-align:left"><span style="font-size:1.0em"><strong>Spark</strong></span></p>
+    </div>
+</div>
+
+
+<div class="sl-block" data-block-type="text" style="width: 720px; left: 115px; top: 71.508px; height: auto;" data-block-id="9a34d193a3513355738e83e15b9ffabe" data-name="text-729806">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 14; text-align: center;">
+        <h2>If you liked this,<br>
+            why not <span style="color:#000080">share</span> it?</h2>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" style="width: 720px; left: 115px; top: 434.021px; height: auto;" data-block-id="315a162511569932ddad123ccecf48dc" data-name="text-3f3284">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 15; text-align: center;">
+        <h2>More Info:</h2>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" style="width: 720px; left: 115px; top: 533.361px; height: auto;" data-block-id="82a68ae3ef2150f0cdd28adb071b464c" data-name="text-09e1e4">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 16; text-align: center;">
+        <p><a href="https://creativityspark.es/2021/01/01/what-is-microsoft-dataverse/" target="_blank">What Is Microsoft Dataverse?</a></p>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" style="width: 720px; left: 115px; top: 604.361px; height: auto;" data-block-id="0ee868ed81505aecc725c040f661afeb" data-name="text-7ecd2d">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 17; text-align: center;">
+        <p><a href="https://creativityspark.es/2021/01/03/what-is-power-automate/" target="_blank">What Is Power Automate?</a></p>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" style="width: 720px; left: 115px; top: 675.361px; height: auto;" data-block-id="2269e5dee4f5d3c36bff3a93f731c5fe" data-name="text-4dc09b">
+    <div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 18; text-align: center;">
+        <p><a href="https://creativityspark.es/2021/01/02/what-is-power-apps-portals/" target="_blank">What Is Power Apps Portals?</a></p>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" data-name="text-a1fab1" data-block-id="96b59fae22f6294696b0ce3429ad4af3" style="height: auto; width: 720px; left: 115px; top: 1065px;">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 19;">
+<p><span style="font-size:0.7em"><span style="color:rgb(48, 48, 48); text-align:left">Background by </span><a href="https://unsplash.com/@jipy32" target="_blank">Jean-Philippe Delberghe</a><span style="color:rgb(48, 48, 48); text-align:left"> on </span><a href="https://unsplash.com/photos/75xPHEQBmvA" target="_blank">Unsplash</a></span></p>
+</div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 233.627px; left: 465.395px; top: 961.125px;" data-block-id="720f6ab803ba92c7b803d94b8050a4c6" data-name="text-6d722b">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 20;">
+<p style="text-align:left"><span style="color:#808080"><span style="font-size:0.7em">Intelligence having fun</span></span></p>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" data-name="image-5855ff" data-block-id="85a9b88b24c68fdfa55d27a063cfcdf5" style="width: 60.8053px; height: 60.8053px; left: 374.195px; top: 325.195px; min-width: 1px; min-height: 1px;"><a class="sl-block-content" style="z-index: 21;" data-inline-svg="false" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A//creativitysp.slides.com/cfernandez/assets&amp;title=Read-only%20column%20in%20Model%20Driven%20Apps%20in%205%20steps&amp;summary=How%20can%20I%20make%20a%20field%20editable%20only%20to%20certain%20users%20in%20model-driven%20apps?%20There%20are%20several%20ways,%20and%20taking%20advantage%20of%20the%20functionality%20provided%20by%20field%20level%20security%20is%20one%20of%20them.&amp;source=slides" target="_blank"><img style="" data-natural-width="291" data-natural-height="291" data-lazy-loaded="" data-src="assets/983c32f26f3ecd94dc3df56a357f766a.svg"></a></div>
+<div class="sl-block" data-block-type="image" style="width: 60.8053px; height: 60.8053px; left: 515px; top: 325.195px; min-width: 1px; min-height: 1px;" data-block-id="199cdb031a1fefcd1ad9c9c445a31b1e" data-name="image-ce9d2f"><a class="sl-block-content" style="z-index: 22;" data-inline-svg="false" href="https://twitter.com/intent/tweet?text=How%20can%20I%20make%20a%20field%20editable%20only%20to%20certain%20users%20in%20model-driven%20apps?%20There%20are%20several%20ways,%20and%20taking%20advantage%20of%20the%20functionality%20provided%20by%20field%20level%20security%20is%20one%20of%20them.%0A%0Ahttps%3A//creativitysp.slides.com/cfernandez/assets" target="_blank"><img style="" data-natural-width="112" data-natural-height="112" data-crop-x="0" data-crop-y="0" data-crop-width="1" data-crop-height="1" data-lazy-loaded="" data-src="assets/e8ae560b5f64481c9bda174c3f02b0f5.svg"></a></div>
+<div class="sl-block" data-block-type="text" data-name="text-cd56dc" data-block-id="0b8c40f907ae9e0981ccbad0142c2d23" style="height: auto; width: 600px; left: 215px; top: 1103.64px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 23;">
+<p><span style="font-size:0.7em">Icons by <a href="https://www.flaticon.com/authors/uniconlabs" target="_blank">Uniconlabs</a></span></p>
+</div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":2352182,"slug":"assets","title":"Read-only column in Model Driven Apps in 5 steps","description":"How can I make a field editable only to certain users in model-driven apps? There are several ways, and taking advantage of the functionality provided by field level security is one of them.","width":950,"height":1200,"margin":0.05,"visibility":"all","published_at":"2022-03-20T17:24:05.636Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/e403fc7f503860e12156c4d7a6b50af6/thumb.jpg?1647794313","view_count":46,"user":{"id":2076187,"username":"cfernandez","name":"Cristhian Fernandez","description":"Solutions Architect at Creativity Spark","thumbnail_url":"https://www.gravatar.com/avatar/2a6cff2c55b0e7be75f6421a5616a184?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","account_type":"enterprise","team_id":2556,"settings":{"id":27915642,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null},"membership":{"role":"owner","manager":true,"activated":true}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"white-blue","auto_slide_interval":10000,"comments_enabled":false,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":true,"slide_count":15,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":null,"data_updated_at":1647797554747,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":true,"notes":{}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = '../lib/fonts/';
+		</script>
+
+		<script src="../lib/reveal.js"></script>
+		<script src="../lib/reveal-plugins.js"></script>
+		<script src="../lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 950,
+				height: 1200,
+				margin: 0.05,
+				
+
+				hash: true,
+				controls: true,
+				progress: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: true,
+				fragmentInURL: true,
+
+				autoSlide: 10000,
+				autoSlideStoppable: true,
+
+				autoAnimateMatcher: SL.deck.AutoAnimate.matcher,
+
+				center: false,
+				shuffle: false,
+				loop: false,
+				rtl: false,
+				navigationMode: "default",
+
+				transition: "slide",
+				backgroundTransition: "slide",
+
+				highlight: {
+					escapeHTML: false
+				},
+
+				plugins: [ RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight ]
+			});
+		</script>
+
+		
+
+	</body>
+</html>
